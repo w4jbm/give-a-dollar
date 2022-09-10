@@ -36,7 +36,7 @@ This has been resized and only shows every tenth frame to save space, but it sti
 
 I have also built a version in Julia. Julia can crank through the rounds really, really FAST if there is no graphing of the results. Graphing slowed things down significantly. I'm running most of this on a ten year old laptop and loading the Plots library had me thinking something had locked up after my earlier experiences with Julia returning results almost immediately.
 
-I use the Linux `convert` command to merge the PNGs into a GIF. It can only handle a few hundred frames on my machine. I could scale things down or look at other ways to build the GIF if it became an issue.
+With the Julia version, there are two options for creating GIF files. You can use the Linux `convert` command to merge the PNGs into a GIF. It can only handle a few hundred frames on my machine before complaining about running out of buffer space. You can also use `ffmpeg` which does not retain the image quality, but produces smaller files and does not depend on memory buffers. Both options are near the end of the code and you can uncomment the one you want to use (or you can use both).
 
 ## Areas for Future Work
 
